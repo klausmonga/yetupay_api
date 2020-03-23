@@ -32,8 +32,8 @@ public class getLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_login);
-        final EditText numEd=(EditText)findViewById(R.id.num);
-        final EditText pwdEd=(EditText)findViewById(R.id.pwd);
+        final com.google.android.material.textfield.TextInputEditText numEd=findViewById(R.id.num);
+        final com.google.android.material.textfield.TextInputEditText pwdEd=findViewById(R.id.pwd);
         final String dev = getIntent().getStringExtra("dev");
         final String p_info = getIntent().getStringExtra("p_info");
         final String run_env = getIntent().getStringExtra("run_env");
