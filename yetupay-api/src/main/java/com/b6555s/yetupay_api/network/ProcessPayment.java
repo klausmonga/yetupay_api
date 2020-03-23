@@ -32,19 +32,19 @@ public class ProcessPayment {
         return dev;
     }
 
-    public void setDev(String dev) {
+    protected void setDev(String dev) {
         this.dev = dev;
     }
 
-    public void setBill_to(String bill_to) {
+    protected void setBill_to(String bill_to) {
         this.bill_to = bill_to;
     }
 
-    public void setP_info(String p_info) {
+    protected void setP_info(String p_info) {
         this.p_info = p_info;
     }
 
-    public void setRun_env(String run_env) {
+    protected void setRun_env(String run_env) {
         this.run_env = run_env;
     }
 
@@ -124,13 +124,13 @@ public class ProcessPayment {
             StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    Log.i("YETUPAY API", response);
+                    Log.i("YETUPAY API LOG", response);
                     context.sendBroadcast(new Intent("YETUPAY-API").putExtra("response",response));
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.e("YETUPAY API", error.toString());
+                    Log.e("YETUPAY API LOG", error.toString());
                 }
             }) {
                 @Override
