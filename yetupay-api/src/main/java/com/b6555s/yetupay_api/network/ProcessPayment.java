@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 
-public class PrecessPayment {
+public class ProcessPayment {
     private String dev;
     private String bill_to;
     private String p_info;
@@ -64,7 +64,7 @@ public class PrecessPayment {
     }
     public void setP_info(String currency,double tax) {
         this.p_info = " \"p_info\":{\n" +
-                "\t  \t\"products\":["+this.getProductsList().replaceFirst(",","")+"],\n" +
+                "\t  \t\"products\":["+this.getProductsList().replaceFirst(","," ")+"],\n" +
                 "\t  \t\"currency\":\""+currency+"\",\n" +
                 "\t  \t\"tax\":"+String.valueOf(tax)+"\n" +
                 "\t  }";
@@ -88,7 +88,7 @@ public class PrecessPayment {
         this.trans = trans;
     }
 
-    public PrecessPayment(Context context) {
+    public ProcessPayment(Context context) {
         this.context = context;
     }
     public void commit(){
