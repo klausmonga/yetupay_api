@@ -32,8 +32,23 @@ public class ProcessPayment {
         return dev;
     }
 
-    public void setDev(String client_id,String client_secret, String num, String pwd) {
-        this.context.startActivity(new Intent(this.context,getLogin.class));
+    public void setDev(String dev) {
+        this.dev = dev;
+    }
+
+    public void setBill_to(String bill_to) {
+        this.bill_to = bill_to;
+    }
+
+    public void setP_info(String p_info) {
+        this.p_info = p_info;
+    }
+
+    public void setRun_env(String run_env) {
+        this.run_env = run_env;
+    }
+
+    public void addDev(String client_id, String client_secret, String num, String pwd) {
         this.dev = "\"dev\":{\n" +
                 "\t  \t\"num\":\""+num+"\",\n" +
                 "\t\t\"pwd\":\""+pwd+"\",\n" +
@@ -47,7 +62,7 @@ public class ProcessPayment {
         return bill_to;
     }
 
-    public void setBill_to(String num, String pwd) {
+    public void addBill_to(String num, String pwd) {
         this.bill_to = "\"bill_to\":{\n" +
                 "\t  \t\"num\":\""+num+"\",\n" +
                 "\t  \t\"pwd\":\""+pwd+"\"\n" +
@@ -63,7 +78,7 @@ public class ProcessPayment {
     public String getProductsList(){
         return this.productsList;
     }
-    public void setP_info(String currency,double tax) {
+    public void addP_info(String currency,double tax) {
         this.p_info = " \"p_info\":{\n" +
                 "\t  \t\"products\":["+this.getProductsList().replaceFirst(",","")+"],\n" +
                 "\t  \t\"currency\":\""+currency+"\",\n" +
@@ -75,7 +90,7 @@ public class ProcessPayment {
         return run_env;
     }
 
-    public void setRun_env(String return_slip_format) {
+    public void addRun_env(String return_slip_format) {
         this.run_env = " \"run_env\":{\n" +
                 "\t  \t\"return_slip_format\":\""+return_slip_format+"\"\n" +
                 "\t  }";
@@ -93,6 +108,12 @@ public class ProcessPayment {
         this.context = context;
     }
     public void commit(){
+        this.context.startActivity(new Intent(this.context,getLogin.class)
+                .putExtra("dev",getDev())
+                .putExtra("p_info",getP_info())
+                .putExtra("run_env",getRun_env()));
+    }
+    protected void do_tx(){
         try {
             RequestQueue requestQueue = Volley.newRequestQueue(this.context);
             String URL = new Connect().getDomain();
@@ -132,7 +153,6 @@ public class ProcessPayment {
             e.printStackTrace();
         }
     }
-
     public JSONObject getResponse() {
         return response;
     }
