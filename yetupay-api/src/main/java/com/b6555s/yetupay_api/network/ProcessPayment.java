@@ -81,7 +81,7 @@ public class ProcessPayment {
     }
 
     public JSONObject getTrans() throws JSONException {
-        return new JSONObject("{\"trans\":{"+this.getDev()+","+this.getBill_to()+","+this.getP_info()+","+this.getRun_env()+"}");
+        return new JSONObject("{\"trans\":{"+this.getDev()+","+this.getBill_to()+","+this.getP_info()+","+this.getRun_env()+"}}");
     }
 
     public void setTrans(JSONObject trans) {
