@@ -26,7 +26,7 @@ public class ProcessPayment {
     private String run_env;
     private JSONObject trans;
     private Context context;
-    private String productsList;
+    private String productsList="";
     private JSONObject response;
     public String getDev() {
         return dev;
@@ -64,7 +64,7 @@ public class ProcessPayment {
     }
     public void setP_info(String currency,double tax) {
         this.p_info = " \"p_info\":{\n" +
-                "\t  \t\"products\":["+this.getProductsList().replaceFirst(","," ")+"],\n" +
+                "\t  \t\"products\":["+this.getProductsList().replaceFirst(",","")+"],\n" +
                 "\t  \t\"currency\":\""+currency+"\",\n" +
                 "\t  \t\"tax\":"+String.valueOf(tax)+"\n" +
                 "\t  }";
