@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.b6555s.yetupay_api.R;
@@ -42,6 +43,8 @@ public class getLogin extends AppCompatActivity {
         findViewById(R.id.paybt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ProgressBar ProcessPayment = findViewById(R.id.loading);
+                ProcessPayment.setVisibility(View.VISIBLE);
                 ProcessPayment processPayment = new ProcessPayment(getApplicationContext());
                 processPayment.setDev(dev);
                 processPayment.setP_info(p_info);

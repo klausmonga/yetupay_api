@@ -1,4 +1,38 @@
 <resources>
-    <string name="app_name">Yetupay API</string>
-    <string name="title_activity_get_login">getLogin</string>
+    <string name="app_name">YetuPay</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="menu_home" translatable="false">Mon portefeuille</string>
+    <string name="menu_withdraw" translatable="false">Retrait</string>
+    <string name="menu_numbers" translatable="false">Mes numeros</string>
+    <string name="menu_self_info" translatable="false">Infos personnelles</string>
+    <string name="my_balance" translatable="false">Ma balance</string>
+    <string name="shr_hint_usernumber" translatable="false">Numero de telephone</string>
+    <string name="shr_hint_password" translatable="false">Mot de passe</string>
+    <string name="confirm_hint_password" translatable="false">Confirmez Mot de passe</string>
+    <string name="shr_button_next" translatable="false">Payer avec YetuPay</string>
+    <string name="no_account" translatable="false">Vous n\'avez pas de comptes? </string>
+    <string name="yes_account" translatable="false">Vous avez pas deja un compte? </string>
+    <string name="log_you" translatable="false">Inscrivez-vous</string>
+    <string name="sign_you" translatable="false">Connectez-vous</string>
+    <string name="withdrawl_title" translatable="false">Retraits</string>
+    <string name="transfert_title" translatable="false">Transferts</string>
+    
+    <string name="title_activity_splach">Splach</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_login_user">Connexion</string>
+    <string name="title_activity_signin">Signin</string>
+    <string name="title_activity_verifnum">Verifnum</string>
 </resources>

@@ -5,7 +5,7 @@
     <application>
         <activity
             android:name=".network.getLogin"
-            android:label="@string/title_activity_get_login"
+            android:label="YetuPay"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
