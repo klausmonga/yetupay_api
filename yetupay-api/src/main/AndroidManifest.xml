@@ -1,2 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.b6555s.yetupay_api" />
+    package="com.b6555s.yetupay_api">
+
+    <application>
+        <activity
+            android:name=".network.getLogin"
+            android:label="@string/title_activity_get_login"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

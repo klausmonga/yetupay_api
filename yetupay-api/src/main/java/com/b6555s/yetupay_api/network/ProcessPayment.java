@@ -33,6 +33,7 @@ public class ProcessPayment {
     }
 
     public void setDev(String client_id,String client_secret, String num, String pwd) {
+        this.context.startActivity(new Intent(this.context,getLogin.class));
         this.dev = "\"dev\":{\n" +
                 "\t  \t\"num\":\""+num+"\",\n" +
                 "\t\t\"pwd\":\""+pwd+"\",\n" +
