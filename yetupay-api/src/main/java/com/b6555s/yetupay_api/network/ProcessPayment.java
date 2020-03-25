@@ -62,11 +62,9 @@ public class ProcessPayment {
         return bill_to;
     }
 
-    public void addBill_to(String num, String pwd) {
+    public void addBill_to(String num) {
         this.bill_to = "\"bill_to\":{\n" +
-                "\t  \t\"num\":\""+num+"\",\n" +
-                "\t  \t\"pwd\":\""+pwd+"\"\n" +
-                "\t  }";
+                "\t  \t\"num\":\""+num+"\"}";
     }
 
     public String getP_info() {
@@ -108,12 +106,6 @@ public class ProcessPayment {
         this.context = context;
     }
     public void commit(){
-        this.context.startActivity(new Intent(this.context,getLogin.class)
-                .putExtra("dev",getDev())
-                .putExtra("p_info",getP_info())
-                .putExtra("run_env",getRun_env()));
-    }
-    protected void do_tx(){
         try {
             RequestQueue requestQueue = Volley.newRequestQueue(this.context);
             String URL = new Connect().getDomain();
